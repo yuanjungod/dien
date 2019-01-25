@@ -1,4 +1,5 @@
-import cPickle
+import pickle
+# import cPickle
 
 f_train = open("local_train_splitByUser", "r")
 uid_dict = {}
@@ -60,6 +61,6 @@ for key, value in sorted_cat_dict:
     cat_voc[key] = index
     index += 1
 
-cPickle.dump(uid_voc, open("uid_voc.pkl", "w"))
-cPickle.dump(mid_voc, open("mid_voc.pkl", "w"))
-cPickle.dump(cat_voc, open("cat_voc.pkl", "w"))
+pickle.dump(uid_voc, open("uid_voc.pkl", "w"))
+pickle.dump(mid_voc, open("mid_voc.pkl", "w"))
+pickle.dump(cat_voc, open("cat_voc.pkl", "w"))
